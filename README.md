@@ -1,4 +1,5 @@
 # Counting Cows: Tracking Illegal Cattle Ranching From High-Resolution Satellite Imagery
+## Accepted at Neurips2020: Tackling Climate Change with ML Workshp
 
 ![](results/cows.png)
 
