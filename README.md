@@ -7,3 +7,9 @@
 ```
 python trainval.py -e cows_counting -sb <savedir_base> -d <datadir> -r 1
 ```
+
+
+## Contributers
+
+![](results/contributers.png)
+
