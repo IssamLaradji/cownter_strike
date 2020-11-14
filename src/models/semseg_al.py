@@ -179,8 +179,6 @@ def get_semsegactive(base_class):
                     self.cost_map[ind_dict['index'], ind_dict['bbox_yxyx']] = 4
 
                 elif self.exp_dict['model']['loss'] in ['joint_cross_entropy', 'cross_entropy']:
-                    # fname = '/mnt/datasets/tmp/%s/%s.pkl' % (self.exp_dict['dataset'], ind_dict['index'])
-                    
                     batch = self.train_set[ind_dict['index']]
                     mask = batch['masks'].squeeze()
                     h, w = mask.shape

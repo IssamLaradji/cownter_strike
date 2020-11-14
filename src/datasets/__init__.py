@@ -65,8 +65,6 @@ def get_dataset(dataset_dict, split, datadir, exp_dict, dataset_size=None):
 
 
     elif name == 'pascal':
-        # datadir = os.path.join('/mnt/datasets/public/issam/')
-        
         dataset = pascal.Pascal(datadir, split=split, supervision='full', 
                                 exp_dict=exp_dict,
                                 sbd=exp_dict['dataset'].get('sbd', False))
@@ -75,7 +73,6 @@ def get_dataset(dataset_dict, split, datadir, exp_dict, dataset_size=None):
             dataset.dataset.images = dataset.dataset.images[:dataset_size[split]]
 
     elif name == "cityscapes":
-        datadir_base = '/mnt/datasets/public/issam/'
         datadir = os.path.join(datadir_base)
         dataset = cityscapes.CityScapes(split=split, exp_dict=exp_dict)
         if dataset_size is not None and dataset_size.get(split, 'all') != 'all':

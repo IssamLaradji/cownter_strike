@@ -14,7 +14,7 @@ class VGG(nn.Module):
         self.conv1_2 = nn.Conv2d(64, 64, kernel_size=3, padding = 1, bias=True)
         self.conv2_2 = nn.Conv2d(128, 128, kernel_size=3, padding = 1, bias=True)
         self.conv3_4 = nn.Conv2d(256, 256, kernel_size=3, padding = 1, bias=True)
-        params = torch.load('/mnt/projects/vision_prototypes/pau/covid/vgg19-dcbb9e9d.pth')
+        params = torch.load('vgg19-dcbb9e9d.pth')
         self.conv1_2.weight = torch.nn.Parameter(params['features.2.weight'])
         self.conv1_2.bias = torch.nn.Parameter(params['features.2.bias'])
         self.conv2_2.weight = torch.nn.Parameter(params['features.7.weight'])

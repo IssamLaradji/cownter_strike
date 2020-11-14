@@ -21,7 +21,7 @@ def get_network(network_name, n_classes, exp_dict):
     
     if network_name == "resnet_seam":
         model_base = resnet_seam.ResNetSeam()
-        path_base = '/mnt/datasets/public/issam/seam'
+        path_base = 'seam'
         model_base.load_state_dict(torch.load(os.path.join(path_base, 'resnet38_SEAM.pth')))
 
 

@@ -448,5 +448,5 @@ def bbox_on_image(bbox_xyxy, image, text_list=None):
         if text_list is not None:
             image_uint8 = cv2.putText(image_uint8, str(int(text_list[i]*100)), 
                         (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX,  0.6, (0, 0, 255) , 1, cv2.LINE_AA) 
-    # hu.save_image("/mnt/datasets/public/issam/prototypes/wscl/tmp.jpg", image_uint8)
+
     return image_uint8 / 255.
