@@ -371,12 +371,7 @@ def load_selected_neg_images(savedir_base, exp_id):
         image = haven.imread(fname)
         plt.imshow(image)
 
-import copy
-def get_prev_exp_dict(exp_dict):
-    exp_dict_prev = copy.deepcopy(exp_dict)
-    exp_dict_prev['savedir_base'] = exp_dict_prev['savedir_base'].replace("/non_borgy/","/borgy/") 
-    exp_dict_prev["sampler_dict"]["stage"] = exp_dict["sampler_dict"]["stage"] - 1
-    return exp_dict_prev
+
 
 def save_img_list(savedir_images, img_list):
     os.makedirs(os.path.dirname(savedir_images),exist_ok=True)
